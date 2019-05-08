@@ -1,0 +1,12 @@
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+}
+.inner {
+	margin: auto;
+	width: 100%;
+	max-width: 600px;
+}

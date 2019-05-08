@@ -1,0 +1,13 @@
+body {
+	font-family: 'Roboto';
+	/* height: 100vh; */
+}
+h1 {
+	font-weight: 400;
+}
+li {
+	font-weight: 300;
+}
+ul ul {
+	list-style: square;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon --exec babel-node index"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "graphql-yoga": "^1.17.4",
+    "mongoose": "^5.5.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "concurrently": "^4.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.2",
+    "nodemon": "^1.18.10"
+  }
+}

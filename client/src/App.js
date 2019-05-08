@@ -60,11 +60,11 @@ const DELETE_TODO = gql`
 
 const App = () => {
 	const [novoTodo, setNovoTodo] = useState('')
-	const [open, setOpen] = useState(false)
+	const [open, setOpen] = useState(null)
 
 	const sadYes = (deleteTodo, id) => {
 		deleteTodo({ variables: { id } })
-		setOpen(false)
+		setOpen(null)
 	}
 
 	const enviar = addTodo => {
@@ -145,18 +145,18 @@ const App = () => {
 															>
 																{deleteTodo => (
 																	<>
-																		<IconButton onClick={() => setOpen(true)}>
+																		<IconButton onClick={() => setOpen(id)}>
 																			<DeleteIcon style={{ color: '#ef4c4c' }} />
 																		</IconButton>
 																		<Dialog
-																			open={open}
-																			onClose={() => setOpen(false)}
+																			open={open === id}
+																			onClose={() => setOpen(null)}
 																			aria-labelledby="alert-dialog-title"
 																			aria-describedby="alert-dialog-description"
 																		>
 																			<DialogTitle id="alert-dialog-title">Delete todo {text}</DialogTitle>
 																			<DialogActions>
-																				<Button onClick={() => setOpen(false)} color="primary">
+																				<Button onClick={() => setOpen(null)} color="primary">
 																					Cancel
 																				</Button>
 																				<Button onClick={() => sadYes(deleteTodo, id)} color="primary" autoFocus>
